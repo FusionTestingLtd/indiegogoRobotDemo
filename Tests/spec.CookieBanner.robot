@@ -20,8 +20,13 @@ Test Teardown    res.Common.End Web Test
 First Test Case
     [Documentation]    this is the first test case
     [Tags]    Smoke
+
     res.CookieBanner.Navigate To Site Under Test
-    sleep    3
+    #Check the CookieBanner is Present
+
+    #Check the CookieBanner Details
+
+    #Check the CookieBanner can be Dismissed
 
 
 
