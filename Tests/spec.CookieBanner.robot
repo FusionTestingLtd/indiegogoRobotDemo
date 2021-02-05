@@ -22,9 +22,8 @@ First Test Case
     [Tags]    Smoke
 
     res.CookieBanner.Navigate To Site Under Test
-    #Check the CookieBanner is Present
-
-    #Check the CookieBanner Details
+    res.CookieBanner.Check the CookieBanner is Present
+    res.CookieBanner.Check the CookieBanner Details
 
     #Check the CookieBanner can be Dismissed
 

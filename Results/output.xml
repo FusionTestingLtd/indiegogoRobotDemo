@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.8.3 on win32)" generated="20210204 19:02:46.612" rpa="false">
-<suite id="s1" name="spec.CookieBanner" source="C:\Users\pbish\Desktop\AutomationPortfolio\indiegogo\Tests\spec.CookieBanner.robot">
+<robot generator="Robot 3.2.2 (Python 3.8.3 on win32)" generated="20210205 14:42:29.177" rpa="false">
+<suite id="s1" name="Spec.Cookiebanner" source="C:\Users\pbish\Desktop\AutomationPortfolio\indiegogo\Tests\spec.cookiebanner.robot">
 <test id="s1-t1" name="First Test Case">
 <kw name="Begin Web Test" library="res.Common" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
@@ -9,10 +9,10 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210204 19:02:46.774" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210204 19:02:46.774" endtime="20210204 19:02:47.821"></status>
+<msg timestamp="20210205 14:42:29.339" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210205 14:42:29.339" endtime="20210205 14:42:30.378"></status>
 </kw>
-<status status="PASS" starttime="20210204 19:02:46.774" endtime="20210204 19:02:47.822"></status>
+<status status="PASS" starttime="20210205 14:42:29.339" endtime="20210205 14:42:30.378"></status>
 </kw>
 <kw name="Navigate To Site Under Test" library="res.CookieBanner">
 <kw name="Load" library="po.CookieBanner">
@@ -21,28 +21,278 @@
 <arguments>
 <arg>https://www.indiegogo.com/</arg>
 </arguments>
-<msg timestamp="20210204 19:02:47.823" level="INFO">Opening url 'https://www.indiegogo.com/'</msg>
-<status status="PASS" starttime="20210204 19:02:47.822" endtime="20210204 19:02:49.955"></status>
+<msg timestamp="20210205 14:42:30.379" level="INFO">Opening url 'https://www.indiegogo.com/'</msg>
+<status status="PASS" starttime="20210205 14:42:30.379" endtime="20210205 14:42:32.438"></status>
 </kw>
-<status status="PASS" starttime="20210204 19:02:47.822" endtime="20210204 19:02:49.955"></status>
+<status status="PASS" starttime="20210205 14:42:30.379" endtime="20210205 14:42:32.439"></status>
 </kw>
-<status status="PASS" starttime="20210204 19:02:47.822" endtime="20210204 19:02:49.955"></status>
+<status status="PASS" starttime="20210205 14:42:30.378" endtime="20210205 14:42:32.439"></status>
+</kw>
+<kw name="Check the CookieBanner is Present" library="res.CookieBanner">
+<kw name="Verify banner visibility and text" library="po.CookieBanner">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialog</arg>
+</arguments>
+<status status="PASS" starttime="20210205 14:42:32.440" endtime="20210205 14:42:33.758"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyContentTitle</arg>
+<arg>This website uses cookies</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.759" level="INFO">Verifying element 'id=CybotCookiebotDialogBodyContentTitle' contains exact text 'This website uses cookies'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.758" endtime="20210205 14:42:33.774"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyContentText</arg>
+<arg>We use cookies to personalize content, to provide social media features, and to analyze our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. For more information view our cookie policy.</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.774" level="INFO">Verifying element 'id=CybotCookiebotDialogBodyContentText' contains exact text 'We use cookies to personalize content, to provide social media features, and to analyze our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services. For more information view our cookie policy.'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.774" endtime="20210205 14:42:33.790"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:32.439" endtime="20210205 14:42:33.790"></status>
+</kw>
+<kw name="Verify Checkbox and Text" library="po.CookieBanner">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyContentCheckboxPersonalInformation</arg>
+</arguments>
+<status status="PASS" starttime="20210205 14:42:33.790" endtime="20210205 14:42:33.798"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>css=#CybotCookiebotDialogBodyContentControls &gt; div &gt; label</arg>
+<arg>Do Not Sell My Personal Information</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.798" level="INFO">Verifying element 'css=#CybotCookiebotDialogBodyContentControls &gt; div &gt; label' contains exact text 'Do Not Sell My Personal Information'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.798" endtime="20210205 14:42:33.813"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:33.790" endtime="20210205 14:42:33.813"></status>
+</kw>
+<kw name="Verify OK button exists and is visible" library="po.CookieBanner">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonAccept</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.830" level="INFO">Element 'id=CybotCookiebotDialogBodyButtonAccept' is displayed.</msg>
+<status status="PASS" starttime="20210205 14:42:33.814" endtime="20210205 14:42:33.830"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonAccept</arg>
+<arg>OK</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.830" level="INFO">Verifying element 'id=CybotCookiebotDialogBodyButtonAccept' contains exact text 'OK'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.830" endtime="20210205 14:42:33.843"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:33.814" endtime="20210205 14:42:33.843"></status>
+</kw>
+<kw name="Verify show details element exists and is visible" library="po.CookieBanner">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonDetails</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.857" level="INFO">Element 'id=CybotCookiebotDialogBodyButtonDetails' is displayed.</msg>
+<status status="PASS" starttime="20210205 14:42:33.844" endtime="20210205 14:42:33.857"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonDetails</arg>
+<arg>Show details</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.857" level="INFO">Verifying element 'id=CybotCookiebotDialogBodyButtonDetails' contains exact text 'Show details'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.857" endtime="20210205 14:42:33.870"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:33.844" endtime="20210205 14:42:33.871"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:32.439" endtime="20210205 14:42:33.871"></status>
+</kw>
+<kw name="Check the CookieBanner Details" library="res.CookieBanner">
+<kw name="Verify Text Change to Hide on Click" library="po.CookieBanner">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonDetails</arg>
+<arg>Show details</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.872" level="INFO">Verifying element 'id=CybotCookiebotDialogBodyButtonDetails' contains exact text 'Show details'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.871" endtime="20210205 14:42:33.881"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonDetails</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.882" level="INFO">Clicking link 'id=CybotCookiebotDialogBodyButtonDetails'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.881" endtime="20210205 14:42:33.948"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogBodyButtonDetails</arg>
+<arg>Hide details</arg>
+</arguments>
+<msg timestamp="20210205 14:42:33.949" level="INFO">Verifying element 'id=CybotCookiebotDialogBodyButtonDetails' contains exact text 'Hide details'.</msg>
+<status status="PASS" starttime="20210205 14:42:33.948" endtime="20210205 14:42:33.965"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetail</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.014" level="INFO">Element 'id=CybotCookiebotDialogDetail' is displayed.</msg>
+<status status="PASS" starttime="20210205 14:42:33.965" endtime="20210205 14:42:34.014"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailFooter</arg>
+<arg>Cookie declaration last updated on 2/2/21 by Cookiebot</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.028" level="INFO">Element 'id=CybotCookiebotDialogDetailFooter' contains text 'Cookie declaration last updated on 2/2/21 by Cookiebot'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.014" endtime="20210205 14:42:34.028"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:33.871" endtime="20210205 14:42:34.028"></status>
+</kw>
+<kw name="Verify Cookie declaration tab" library="po.CookieBanner">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTabsOverview</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.042" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentTabsOverview' is displayed.</msg>
+<status status="PASS" starttime="20210205 14:42:34.029" endtime="20210205 14:42:34.042"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTabsOverview</arg>
+<arg>Cookie declaration</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.042" level="INFO">Verifying element 'id=CybotCookiebotDialogDetailBodyContentTabsOverview' contains exact text 'Cookie declaration'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.042" endtime="20210205 14:42:34.054"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentCookieContainerPreference</arg>
+<arg>Preferences (4)</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.068" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentCookieContainerPreference' contains text 'Preferences (4)'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.054" endtime="20210205 14:42:34.068"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentCookieContainerStatistics</arg>
+<arg>Statistics (12)</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.082" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentCookieContainerStatistics' contains text 'Statistics (12)'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.068" endtime="20210205 14:42:34.082"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising</arg>
+<arg>Marketing (35)</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.098" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentCookieContainerAdvertising' contains text 'Marketing (35)'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.082" endtime="20210205 14:42:34.098"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified</arg>
+<arg>Unclassified (4)</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.112" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentCookieContainerUnclassified' contains text 'Unclassified (4)'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.098" endtime="20210205 14:42:34.112"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:34.028" endtime="20210205 14:42:34.112"></status>
+</kw>
+<kw name="Verify About cookie Tab" library="po.CookieBanner">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTabsAbout</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.126" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentTabsAbout' is displayed.</msg>
+<status status="PASS" starttime="20210205 14:42:34.113" endtime="20210205 14:42:34.126"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTabsAbout</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.126" level="INFO">Clicking link 'id=CybotCookiebotDialogDetailBodyContentTabsAbout'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.126" endtime="20210205 14:42:34.156"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTextAbout</arg>
+<arg>Cookies are small text files that can be used by websites to make a user's experience more efficient.</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.171" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentTextAbout' contains text 'Cookies are small text files that can be used by websites to make a user's experience more efficient.'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.156" endtime="20210205 14:42:34.171"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTextAbout</arg>
+<arg>The law states that we can store cookies on your device if they are strictly necessary for the operation of this site. For all other types of cookies we need your permission.</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.180" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentTextAbout' contains text 'The law states that we can store cookies on your device if they are strictly necessary for the operation of this site. For all other types of cookies we need your permission.'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.171" endtime="20210205 14:42:34.180"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTextAbout</arg>
+<arg>This site uses different types of cookies. Some cookies are placed by third party services that appear on our pages.</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.190" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentTextAbout' contains text 'This site uses different types of cookies. Some cookies are placed by third party services that appear on our pages.'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.181" endtime="20210205 14:42:34.190"></status>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>id=CybotCookiebotDialogDetailBodyContentTextAbout</arg>
+<arg>Your consent applies to the following domains: www.indiegogo.com</arg>
+</arguments>
+<msg timestamp="20210205 14:42:34.199" level="INFO">Element 'id=CybotCookiebotDialogDetailBodyContentTextAbout' contains text 'Your consent applies to the following domains: www.indiegogo.com'.</msg>
+<status status="PASS" starttime="20210205 14:42:34.190" endtime="20210205 14:42:34.199"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:34.112" endtime="20210205 14:42:34.199"></status>
+</kw>
+<status status="PASS" starttime="20210205 14:42:33.871" endtime="20210205 14:42:34.199"></status>
 </kw>
 <kw name="End Web Test" library="res.Common" type="teardown">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210204 19:02:49.956" endtime="20210204 19:02:52.032"></status>
+<status status="PASS" starttime="20210205 14:42:34.200" endtime="20210205 14:42:36.279"></status>
 </kw>
-<status status="PASS" starttime="20210204 19:02:49.956" endtime="20210204 19:02:52.032"></status>
+<status status="PASS" starttime="20210205 14:42:34.200" endtime="20210205 14:42:36.279"></status>
 </kw>
 <doc>this is the first test case</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" starttime="20210204 19:02:46.773" endtime="20210204 19:02:52.033" critical="yes"></status>
+<status status="PASS" starttime="20210205 14:42:29.339" endtime="20210205 14:42:36.279" critical="yes"></status>
 </test>
 <doc>This is the cookie banner Test Suite</doc>
-<status status="PASS" starttime="20210204 19:02:46.613" endtime="20210204 19:02:52.034"></status>
+<status status="PASS" starttime="20210205 14:42:29.178" endtime="20210205 14:42:36.281"></status>
 </suite>
 <statistics>
 <total>
@@ -53,7 +303,7 @@
 <stat pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="spec.CookieBanner">spec.CookieBanner</stat>
+<stat pass="1" fail="0" id="s1" name="Spec.Cookiebanner">Spec.Cookiebanner</stat>
 </suite>
 </statistics>
 <errors>

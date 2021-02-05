@@ -7,20 +7,17 @@ Navigate To Site Under Test
     po.CookieBanner.Load
 
 Check the CookieBanner is Present
-    #Check that the CookieBanner exists and is visable
-    #Check that the banner has the correct heading
-    #check that the banner has the correct text
-    #check that it has a checkbox
-    #check the Checkbox has the correct text
-    #check that the OK button exists and is visible
-    #check show details element exists and is visible
+    po.CookieBanner.Verify banner visibility and text
+    po.CookieBanner.Verify Checkbox and Text
+    po.CookieBanner.Verify OK button exists and is visible
+    po.CookieBanner.Verify show details element exists and is visible
 
 Check the CookieBanner Details
-    #check that it changes to Hide Details when clicked
-    #check for the Cookie declaration tab
-    #check for the About cookie Tab
-    # check the about cookie text
-    # check for each sub tab 'necessary, preference' etc
+    po.CookieBanner.Verify Text Change to Hide on Click
+    po.CookieBanner.Verify Cookie declaration tab
+    po.CookieBanner.Verify About cookie Tab
+
+
 
 Check the CookieBanner can be Dismissed
     #check when OK is pressed the cookie banner is no longer visable
